@@ -5,20 +5,15 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -47,8 +42,8 @@ public class MainActivity extends AppCompatActivity
 
     private void login()
     {
-        final String usr = user.getText().toString().trim();
-        final String pw = password.getText().toString().trim();
+        String usr = user.getText().toString().trim();
+        String pw = password.getText().toString().trim();
         //pDialog.setMessage("Login Process...");
         //showDialog();
 
@@ -57,7 +52,6 @@ public class MainActivity extends AppCompatActivity
             public void onResponse(String response) {
                 if(response.contains(AppVar.LOGIN_USER)) {
                     //hideDialog();
-                    Log.d("Login", "onResponse: " + response);
                     String [] x = response.split("#");
                     String NIS = x[1];
                     String Username = x[2];
@@ -66,35 +60,20 @@ public class MainActivity extends AppCompatActivity
                     gotouser(NIS, Username, Password);
                 }
                 else {
-                    int duration = Toast.LENGTH_LONG;
-                    Context context = getApplicationContext();
                     //hideDialog();
                     //Displaying an error message on toast
-                    Toast.makeText(context, "Invalid username or password", duration).show();
+                    Toast.makeText(context, "Invalid username or password", Toast.LENGTH_LONG).show();
                 }
             }
         },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        int duration = Toast.LENGTH_LONG;
-                        Context context = getApplicationContext();
                         //You can handle error here if you want
                         //hideDialog();
-                        Toast.makeText(context, "The server unreachable", duration).show();
+                        Toast.makeText(context, "The server unreachable", Toast.LENGTH_LONG).show();
                     }
-                }) {
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> params = new HashMap<>();
-                //Adding parameters to request
-                params.put(AppVar.KEY_USERNAME, usr);
-                params.put(AppVar.KEY_PASSWORD, pw);
-
-                //returning parameter
-                return params;
-            }
-        };
+                });
 
         Volley.newRequestQueue(this).add(stringRequest);
     }
@@ -106,7 +85,7 @@ public class MainActivity extends AppCompatActivity
         b.putString("nis",nis);
         b.putString("username",username);
         b.putString("password",password);
-        Intent in = new Intent(getApplicationContext(), ProsesActivity.class);
+        Intent in = new Intent(getApplicationContext(), CourseActivity.class);
         in.putExtras(b);
         startActivity(in);
         finish();
