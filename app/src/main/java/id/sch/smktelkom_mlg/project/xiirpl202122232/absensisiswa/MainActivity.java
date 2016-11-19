@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity
                         //hideDialog();
                         Toast.makeText(context, "The server unreachable", duration).show();
                     }
+
                 }) {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
@@ -96,6 +97,7 @@ public class MainActivity extends AppCompatActivity
             }
         };
 
+        //Adding the string request to the queue
         Volley.newRequestQueue(this).add(stringRequest);
     }
 
