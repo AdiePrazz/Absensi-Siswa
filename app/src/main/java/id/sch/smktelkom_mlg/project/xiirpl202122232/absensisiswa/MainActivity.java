@@ -2,7 +2,6 @@ package id.sch.smktelkom_mlg.project.xiirpl202122232.absensisiswa;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -104,14 +103,7 @@ public class MainActivity extends AppCompatActivity
 
     private void gotouser(String nis, String username, String password)
     {
-        Bundle b=new Bundle();
-        b.putString("nis",nis);
-        b.putString("username",username);
-        b.putString("password",password);
-        Intent in = new Intent(getApplicationContext(), ProsesActivity.class);
-        in.putExtras(b);
-        startActivity(in);
-        finish();
+
     }
 
     /*private void showDialog()
