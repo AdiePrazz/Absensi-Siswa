@@ -3,8 +3,11 @@ Berikut adalah projek android dari kelompok kami. Aplikasi ini adalah aplikasi a
 
 # Nama Kelompok
 Adi Prasetyo XII RPL 2 / 02
+
 Dita Ayu XII RPL 2 / 12
+
 Luis Anggraeni XII RPL 2 / 22
+
 Resta Kholifatul Inayah XII RPL 2 / 32
 
 # Screenshot Aplikasi
