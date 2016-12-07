@@ -2,13 +2,13 @@
 Berikut adalah projek android dari kelompok kami. Aplikasi ini adalah aplikasi absensi untuk siswa dan berbasis online, kami membuat aplikasi ini untuk memudahkan proses absensi yang dilakukan oleh para guru di sekolah.
 
 # Nama Kelompok
-Adi Prasetyo XII-RPL-2 / 02
+Adi Prasetyo, XIIRPL2, 02, 4102/1167.063, AdiePrazz
 
-Dita Ayu XII-RPL-2 / 12
+Dita Ayu, XIIRPL2, 12, 4327/1125.063,Ditaayu
 
-Luis AnggraeniXII-RPL-2 / 22
+Luis Anggraeni, XIIRPL2, 22, 4369/1267.063,Luisanggraeni
 
-Resta Kholifatul Inayah XII-RPL-2 / 32
+Resta Kholifatul Inayah, XIIRPL2, 32, 4422/1320.063,resta190498
 
 # Screenshot Aplikasi
 ![3](https://cloud.githubusercontent.com/assets/15698905/20467942/5ef7585a-afc3-11e6-8c16-c69977ac5e7d.JPG)
